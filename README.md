@@ -97,8 +97,9 @@ RESEND_API_KEY=
 ##  Contact & Support
 
 Want to collaborate or suggest a feature? Open an issue or pull request!  
-Email: amithp0210@gmail.com
+Emails: sushanthbs766@gmail.com
+        amithp0210@gmail.com 
 
 ---
 
-**Built by Amith and the Splendz team.**
+**Built by Amith ,Sushanth and the Splendz team.**
