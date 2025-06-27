@@ -1,4 +1,4 @@
-# Splendz  – AI Expense Splitting App
+# Splendz  – Smart Expense Splitting, Simplified with AI.
 
 [![Launch App](./public/splendz-hero.png)](https://pay-split-ai-r1sh.vercel.app/)
 
