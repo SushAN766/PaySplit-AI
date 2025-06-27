@@ -56,10 +56,10 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/<your-username>/splendz.git
+git clone https://github.com/<your-username>/PaySplit-AI.git
 
 # Navigate to the project folder
-cd splendz
+cd PaySplit-AI
 
 # Install dependencies
 npm install
