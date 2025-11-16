@@ -3,6 +3,7 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { internal } from "./_generated/api";
 
+// Store or update user in Convex
 export const store = mutation({
   args: {},
   handler: async (ctx) => {
@@ -11,6 +12,17 @@ export const store = mutation({
       throw new Error("Called storeUser without authentication present");
     }
 
+    // Generate safe fallback name
+    const emailUsername = identity.email?.split("@")[0] || "User";
+
+    const safeName =
+      identity.name ||
+      identity.fullName ||
+      identity.firstName ||
+      emailUsername ||
+      "User";
+
+    // Check if user already exists
     const existingUser = await ctx.db
       .query("users")
       .withIndex("by_token", (q) =>
@@ -18,22 +30,15 @@ export const store = mutation({
       )
       .unique();
 
-    // ✔ Safe name fallback (Clerk sometimes doesn't send full name)
-    const safeName =
-      identity.name ||
-      identity.fullName ||
-      identity.firstName ||
-      "Unknown User";
-
+    // Update existing user
     if (existingUser) {
-      // Update name if changed
       if (existingUser.name !== safeName) {
         await ctx.db.patch(existingUser._id, { name: safeName });
       }
       return existingUser._id;
     }
 
-    // Insert brand-new user
+    // Insert new user into Convex
     return await ctx.db.insert("users", {
       name: safeName,
       tokenIdentifier: identity.tokenIdentifier,
@@ -43,6 +48,7 @@ export const store = mutation({
   },
 });
 
+// Get current user from Convex
 export const getCurrentUser = query({
   handler: async (ctx) => {
     const identity = await ctx.auth.getUserIdentity();
@@ -61,6 +67,7 @@ export const getCurrentUser = query({
   },
 });
 
+// Search users by name or email
 export const searchUsers = query({
   args: {
     query: v.string(),
@@ -80,14 +87,14 @@ export const searchUsers = query({
       .withSearchIndex("search_email", (q) => q.search("email", args.query))
       .collect();
 
-    const users = [
+    const merged = [
       ...nameResults,
       ...emailResults.filter(
         (email) => !nameResults.some((name) => name._id === email._id)
       ),
     ];
 
-    return users
+    return merged
       .filter((user) => user._id !== currentUser._id)
       .map((user) => ({
         id: user._id,
