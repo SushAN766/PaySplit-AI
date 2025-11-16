@@ -1,4 +1,4 @@
-# Splendz  – Smart Expense Splitting, Simplified with AI.
+<h1 align="center"> Splendz – AI-Powered Expense Manager & Smart Settlements </h1>
 
 [![Launch App](./public/splendz-hero.png)](https://pay-split-ai-r1sh.vercel.app/)
 
@@ -10,17 +10,31 @@
 
 ---
 
-##  Features
+## Core Features
 
- **Event Creation & Management**: Plan events, add tasks, set budgets & assign roles.  
- **Smart Scheduling Assistant**: Find the best date and time using AI-based suggestions.  
- **Shared Budget & Expense Tracking**: Allocate budgets, track group expenses, and settle up easily.  
- **AI-Driven Recommendations**: Venue, task, and vendor suggestions based on your event type.  
- **Smart Debt Simplification**: One-click optimization to reduce transactions.  
- **Analytics Dashboard**: Visualize tasks, expenses, and budget usage.  
- **AI-Generated Reminders**: Email & in-app alerts using RESEND.  
- **Group Management**: Assign roles and track progress collaboratively.  
- **Fully Responsive UI**: Beautiful on desktop, tablet, and mobile.
+- **Add & Split Expenses**  
+  Split equally, by percentage, or with custom amounts.
+
+- **Group & Individual Tracking**  
+  Track who owes whom in real time.
+
+- **Smart Debt Simplification**  
+  Automatically reduce unnecessary transactions.
+
+- **Expense Analytics Dashboard**  
+  View monthly trends, net balances, and detailed breakdowns.
+
+- **AI-Powered Insights**  
+  Personalized spending analysis and smart reminders powered by Gemini AI.
+
+- **Email Reminders**  
+  Stay updated with AI-generated reminder emails using RESEND.
+
+- **Contact & Group Management**  
+  Create or join groups, manage members, and track payments efficiently.
+
+- **Fully Responsive UI**  
+  Optimized for mobile, tablet, and desktop.
 
 ---
 
