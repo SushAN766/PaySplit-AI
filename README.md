@@ -1,6 +1,6 @@
 <h1 align="center"> Splendz – AI-Powered Expense Manager & Smart Settlements </h1>
 
-[![Launch App](./public/splendz-hero.png)](https://pay-split-ai-r1sh.vercel.app/)
+[![Launch App](./public/splendz-hero.png)](https://pay-split-ai-dhrp.vercel.app/)
 
 **Splendz** is a modern, AI-powered event planning and expense-sharing platform that makes organizing events—from casual hangouts to large parties—seamless and stress-free. With real-time coordination, intelligent budgeting, task tracking, and smart settlement features, Splendz helps you focus on the fun, not the fuss. Built with cutting-edge tech like Next.js, Convex, Gemini AI, and ShadCN UI, it delivers lightning-fast performance and a stunning UI across all devices.
 
